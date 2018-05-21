@@ -15,6 +15,11 @@
 		815021FD20B0C7820056E703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815021FB20B0C7820056E703 /* LaunchScreen.storyboard */; };
 		8150220820B0C7820056E703 /* passionProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150220720B0C7820056E703 /* passionProjectTests.swift */; };
 		8150221320B0C7820056E703 /* passionProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150221220B0C7820056E703 /* passionProjectUITests.swift */; };
+		81BEE6CC20B279850043644D /* Network Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6CB20B279850043644D /* Network Helper.swift */; };
+		81BEE6CF20B279E30043644D /* Image Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6CE20B279E30043644D /* Image Helper.swift */; };
+		81BEE6D120B27B160043644D /* unsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D020B27B160043644D /* unsplashAPI.swift */; };
+		81BEE6D320B27B4C0043644D /* unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D220B27B4C0043644D /* unsplash.swift */; };
+		81BEE6D520B322460043644D /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D420B322460043644D /* ImageCaching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		8150220E20B0C7820056E703 /* passionProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passionProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8150221220B0C7820056E703 /* passionProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passionProjectUITests.swift; sourceTree = "<group>"; };
 		8150221420B0C7820056E703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81BEE6CB20B279850043644D /* Network Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Helper.swift"; sourceTree = "<group>"; };
+		81BEE6CE20B279E30043644D /* Image Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Helper.swift"; sourceTree = "<group>"; };
+		81BEE6D020B27B160043644D /* unsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplashAPI.swift; sourceTree = "<group>"; };
+		81BEE6D220B27B4C0043644D /* unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplash.swift; sourceTree = "<group>"; };
+		81BEE6D420B322460043644D /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		815021EF20B0C7810056E703 /* passionProject */ = {
 			isa = PBXGroup;
 			children = (
+				81BEE6CD20B279900043644D /* Models */,
 				815021F020B0C7810056E703 /* AppDelegate.swift */,
 				815021F220B0C7810056E703 /* art.scnassets */,
 				815021F420B0C7810056E703 /* ViewController.swift */,
@@ -126,6 +137,18 @@
 				8150221420B0C7820056E703 /* Info.plist */,
 			);
 			path = passionProjectUITests;
+			sourceTree = "<group>";
+		};
+		81BEE6CD20B279900043644D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81BEE6CB20B279850043644D /* Network Helper.swift */,
+				81BEE6CE20B279E30043644D /* Image Helper.swift */,
+				81BEE6D020B27B160043644D /* unsplashAPI.swift */,
+				81BEE6D220B27B4C0043644D /* unsplash.swift */,
+				81BEE6D420B322460043644D /* ImageCaching.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BEE6D120B27B160043644D /* unsplashAPI.swift in Sources */,
+				81BEE6D320B27B4C0043644D /* unsplash.swift in Sources */,
+				81BEE6CF20B279E30043644D /* Image Helper.swift in Sources */,
 				815021F520B0C7810056E703 /* ViewController.swift in Sources */,
+				81BEE6D520B322460043644D /* ImageCaching.swift in Sources */,
+				81BEE6CC20B279850043644D /* Network Helper.swift in Sources */,
 				815021F120B0C7810056E703 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +398,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "ba64e9cb-fee5-4735-b9a6-e6a44bd07ac7";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -423,6 +452,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "ba64e9cb-fee5-4735-b9a6-e6a44bd07ac7";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -434,15 +464,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86N2U73XRJ;
+				DEVELOPMENT_TEAM = 4B235U6MKZ;
 				INFOPLIST_FILE = passionProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = c4q.passionProject;
+				PRODUCT_BUNDLE_IDENTIFIER = izza.passionProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,15 +485,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86N2U73XRJ;
+				DEVELOPMENT_TEAM = 4B235U6MKZ;
 				INFOPLIST_FILE = passionProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = c4q.passionProject;
+				PRODUCT_BUNDLE_IDENTIFIER = izza.passionProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
