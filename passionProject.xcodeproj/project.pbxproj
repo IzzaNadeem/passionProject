@@ -20,6 +20,11 @@
 		81BEE6D120B27B160043644D /* unsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D020B27B160043644D /* unsplashAPI.swift */; };
 		81BEE6D320B27B4C0043644D /* unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D220B27B4C0043644D /* unsplash.swift */; };
 		81BEE6D520B322460043644D /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D420B322460043644D /* ImageCaching.swift */; };
+		81F9F36620B487B7009092D1 /* SpotifyLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */; };
+		81F9F36820B48B15009092D1 /* spotifyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F36720B48B15009092D1 /* spotifyToken.swift */; };
+		81F9F36A20B48BA1009092D1 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F36920B48BA1009092D1 /* NetworkSession.swift */; };
+		81F9F36C20B48BE3009092D1 /* TokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F36B20B48BE3009092D1 /* TokenAPI.swift */; };
+		81F9F3B220B4AE62009092D1 /* SpotifyKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F3B120B4AE62009092D1 /* SpotifyKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		81BEE6D020B27B160043644D /* unsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplashAPI.swift; sourceTree = "<group>"; };
 		81BEE6D220B27B4C0043644D /* unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplash.swift; sourceTree = "<group>"; };
 		81BEE6D420B322460043644D /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
+		81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyLoginViewController.swift; sourceTree = "<group>"; };
+		81F9F36720B48B15009092D1 /* spotifyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotifyToken.swift; sourceTree = "<group>"; };
+		81F9F36920B48BA1009092D1 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		81F9F36B20B48BE3009092D1 /* TokenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPI.swift; sourceTree = "<group>"; };
+		81F9F3B120B4AE62009092D1 /* SpotifyKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,7 @@
 				815021F020B0C7810056E703 /* AppDelegate.swift */,
 				815021F220B0C7810056E703 /* art.scnassets */,
 				815021F420B0C7810056E703 /* ViewController.swift */,
+				81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */,
 				815021F620B0C7810056E703 /* Main.storyboard */,
 				815021F920B0C7820056E703 /* Assets.xcassets */,
 				815021FB20B0C7820056E703 /* LaunchScreen.storyboard */,
@@ -147,6 +158,10 @@
 				81BEE6D020B27B160043644D /* unsplashAPI.swift */,
 				81BEE6D220B27B4C0043644D /* unsplash.swift */,
 				81BEE6D420B322460043644D /* ImageCaching.swift */,
+				81F9F36920B48BA1009092D1 /* NetworkSession.swift */,
+				81F9F36720B48B15009092D1 /* spotifyToken.swift */,
+				81F9F36B20B48BE3009092D1 /* TokenAPI.swift */,
+				81F9F3B120B4AE62009092D1 /* SpotifyKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,11 +299,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BEE6D120B27B160043644D /* unsplashAPI.swift in Sources */,
+				81F9F36A20B48BA1009092D1 /* NetworkSession.swift in Sources */,
 				81BEE6D320B27B4C0043644D /* unsplash.swift in Sources */,
+				81F9F36620B487B7009092D1 /* SpotifyLoginViewController.swift in Sources */,
+				81F9F36C20B48BE3009092D1 /* TokenAPI.swift in Sources */,
 				81BEE6CF20B279E30043644D /* Image Helper.swift in Sources */,
 				815021F520B0C7810056E703 /* ViewController.swift in Sources */,
 				81BEE6D520B322460043644D /* ImageCaching.swift in Sources */,
 				81BEE6CC20B279850043644D /* Network Helper.swift in Sources */,
+				81F9F36820B48B15009092D1 /* spotifyToken.swift in Sources */,
+				81F9F3B220B4AE62009092D1 /* SpotifyKeys.swift in Sources */,
 				815021F120B0C7810056E703 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
