@@ -20,6 +20,9 @@
 		81BEE6D120B27B160043644D /* unsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D020B27B160043644D /* unsplashAPI.swift */; };
 		81BEE6D320B27B4C0043644D /* unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D220B27B4C0043644D /* unsplash.swift */; };
 		81BEE6D520B322460043644D /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D420B322460043644D /* ImageCaching.swift */; };
+		81D6CA4420B4CA4200E328CE /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D6CA4320B4CA4200E328CE /* SpotifyAuthentication.framework */; };
+		81D6CA4620B4CA4B00E328CE /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D6CA4520B4CA4B00E328CE /* SpotifyAudioPlayback.framework */; };
+		81D6CA4820B4CA5500E328CE /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D6CA4720B4CA5500E328CE /* SpotifyMetadata.framework */; };
 		81F9F36620B487B7009092D1 /* SpotifyLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */; };
 		81F9F36820B48B15009092D1 /* spotifyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F36720B48B15009092D1 /* spotifyToken.swift */; };
 		81F9F36A20B48BA1009092D1 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9F36920B48BA1009092D1 /* NetworkSession.swift */; };
@@ -64,6 +67,10 @@
 		81BEE6D020B27B160043644D /* unsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplashAPI.swift; sourceTree = "<group>"; };
 		81BEE6D220B27B4C0043644D /* unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplash.swift; sourceTree = "<group>"; };
 		81BEE6D420B322460043644D /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
+		81D6CA4320B4CA4200E328CE /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		81D6CA4520B4CA4B00E328CE /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		81D6CA4720B4CA5500E328CE /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		81D6CA4920B4CB0100E328CE /* passionProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passionProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyLoginViewController.swift; sourceTree = "<group>"; };
 		81F9F36720B48B15009092D1 /* spotifyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotifyToken.swift; sourceTree = "<group>"; };
 		81F9F36920B48BA1009092D1 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
@@ -76,6 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D6CA4420B4CA4200E328CE /* SpotifyAuthentication.framework in Frameworks */,
+				81D6CA4820B4CA5500E328CE /* SpotifyMetadata.framework in Frameworks */,
+				81D6CA4620B4CA4B00E328CE /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +131,7 @@
 			children = (
 				81BEE6CD20B279900043644D /* Models */,
 				815021F020B0C7810056E703 /* AppDelegate.swift */,
+				81D6CA4920B4CB0100E328CE /* passionProject-Bridging-Header.h */,
 				815021F220B0C7810056E703 /* art.scnassets */,
 				815021F420B0C7810056E703 /* ViewController.swift */,
 				81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */,
@@ -155,6 +166,9 @@
 			children = (
 				81BEE6CB20B279850043644D /* Network Helper.swift */,
 				81BEE6CE20B279E30043644D /* Image Helper.swift */,
+				81D6CA4720B4CA5500E328CE /* SpotifyMetadata.framework */,
+				81D6CA4520B4CA4B00E328CE /* SpotifyAudioPlayback.framework */,
+				81D6CA4320B4CA4200E328CE /* SpotifyAuthentication.framework */,
 				81BEE6D020B27B160043644D /* unsplashAPI.swift */,
 				81BEE6D220B27B4C0043644D /* unsplash.swift */,
 				81BEE6D420B322460043644D /* ImageCaching.swift */,
@@ -234,6 +248,7 @@
 				TargetAttributes = {
 					815021EC20B0C7810056E703 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					8150220220B0C7820056E703 = {
 						CreatedOnToolsVersion = 9.3;
@@ -484,9 +499,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4B235U6MKZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/passionProject/Models",
+				);
 				INFOPLIST_FILE = passionProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +516,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "passionProject/passionProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -505,9 +527,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4B235U6MKZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/passionProject/Models",
+				);
 				INFOPLIST_FILE = passionProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,6 +544,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "passionProject/passionProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
