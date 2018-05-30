@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             auth.sessionUserDefaultsKey = "current session"
         return true
     }
+    
      func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         //called when user signs into spotify. session data saved into user defaults, then notification posted to call updateAfterFirstLogin in ViewController.swift.
         // 2- check if app can handle redirect URL
