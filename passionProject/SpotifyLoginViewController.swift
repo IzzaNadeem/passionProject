@@ -80,6 +80,7 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
         // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
         print("logged in")
+        //look into AVAFoundation //iOS 11h
         self.player?.playSpotifyURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", startingWith: 0, startingWithPosition: 0, callback: { (error) in
             if (error != nil) {
                 print("playing!")
