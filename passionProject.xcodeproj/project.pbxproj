@@ -136,7 +136,6 @@
 				815021F420B0C7810056E703 /* ViewController.swift */,
 				81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */,
 				815021F620B0C7810056E703 /* Main.storyboard */,
-				815021F920B0C7820056E703 /* Assets.xcassets */,
 				81717B8620C5CD47003F02A3 /* imagecover.jpg */,
 				815021FB20B0C7820056E703 /* LaunchScreen.storyboard */,
 				815021FE20B0C7820056E703 /* Info.plist */,
@@ -177,6 +176,7 @@
 				81F9F36720B48B15009092D1 /* spotifyToken.swift */,
 				81F9F36B20B48BE3009092D1 /* TokenAPI.swift */,
 				81F9F3B120B4AE62009092D1 /* SpotifyKeys.swift */,
+				815021F920B0C7820056E703 /* Assets.xcassets */,
 				81717B8720C5CE00003F02A3 /* art.scnassets */,
 			);
 			path = Models;
