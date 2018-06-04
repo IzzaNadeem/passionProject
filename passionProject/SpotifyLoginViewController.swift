@@ -15,20 +15,13 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
     private let scheme = "passionProject://"
     
     @IBOutlet weak var loginButton: UIButton!
-    //MEDIUM
+    @IBOutlet weak var coverImage: UIImageView!
+    
     var player: SPTAudioStreamingController?
     var auth = SPTAuth.defaultInstance()!
     var session:SPTSession!
-    var loginUrl: URL? //NOT SURE IF I NEED THIS DELETE THIS MAYBE
+    var loginUrl: URL? //URL used to go to the web to loginto spotify you give it value in setup func
    
-    //class that manages sharing a one-time web-service login, along with cookies and website data between safari and the app; which can be used for automatic log in
-    //here we are making sure we have a strong reference to the session
-    //read more about this on apple documentation
-   // private var authSession: SFAuthenticationSession? //this will help you login with the keys
-    //provides you the webview and the alert
-    
-    //private let tokenAPI = TokenAPI()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -50,6 +43,8 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
     //MEDIUM ARTICLE
     @objc func updateAfterFirstLogin() {
         loginButton.isHidden = true
+//        coverImage.image = UIImage(named: "imagecover.jpg")
+        coverImage.image = #imageLiteral(resourceName: "imagecover.jpg")
         let userDefaults = UserDefaults.standard
         if let sessionObj:AnyObject = userDefaults.object(forKey: "SpotifySession") as AnyObject? {
             let sessionDataObj = sessionObj as! Data
@@ -65,23 +60,14 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
         SPTAuth.defaultInstance().clientID = "87651b0a4fc34e36ac8cea0b9cd0e96a"
         SPTAuth.defaultInstance().redirectURL = URL(string: "passionProject://returnAfterLogin")
         SPTAuth.defaultInstance().requestedScopes = [SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistReadPrivateScope]
-        loginUrl = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()
+        loginUrl = SPTAuth.defaultInstance().spotifyWebAuthenticationURL() //URL used to go to the web to loginto spotify
     }
-    //this helper function will help us retrieve the code from the callback url (basically separate the code from the scheme)
-//    private func getParam(url: URL, param: String) -> String? {
-//        guard let urlComponents = URLComponents(string: url.absoluteString) else {
-//            print("url is nil")
-//            return nil
-//        }
-        //gets the first element of the sequence that satisties the given predicate
-//        return urlComponents.queryItems?.first{$0.name == param}?.value //gets the first param that has the name you want, and then gives you its value
-//    }
-//
+  
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
         // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
         print("logged in")
         //look into AVAFoundation //iOS 11h
-        self.player?.playSpotifyURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+        self.player?.playSpotifyURI("spotify:track:77a5Eu7lC3tG0Sukt2O91U?context=spotify%3Auser%3Aspotify%3Aplaylist%3A37i9dQZF1DX1lVhptIYRda", startingWith: 0, startingWithPosition: 0, callback: { (error) in
             if (error != nil) {
                 print("playing!")
             }
@@ -90,25 +76,6 @@ class SpotifyLoginViewController: UIViewController, SPTAudioStreamingPlaybackDel
 
     
     @IBAction func spotifyLogin(_ sender: UIButton) {
-        //Here we are creating a SFAuthenticationSession to present the user with a login page of the web service e.g Spotify login page
-        //scheme is the redirect uri
-        //instantiate the authsession here with the auth URL (provided by the service), our iOS App Scheme
-//        authSession = SFAuthenticationSession(url: URL(string: SpotifyKeys.authURL)!, callbackURLScheme: scheme, completionHandler: { (callbackURL, error) in
-//            if let error = error {
-//                print("loginWithSpotify error: \(error)")
-//            } else if let callbackURL = callbackURL {
-//                print("callbackURL: \(callbackURL)")
-//                //handshake 1 - get authorization code
-//                guard let authorizationCode = self.getParam(url: callbackURL, param: "code") else {
-//                    print("need valid authorization code")
-//                    return
-//                }
-//                print(authorizationCode)
-//                //handshake 2 - get access token
-//                self.tokenAPI.tokenExchange(code: authorizationCode)
-//            }
-//        })
-//        authSession?.start()
         UIApplication.shared.open(loginUrl!, options: [:]) { (success) in
             if success {
                 if self.auth.canHandle(self.auth.redirectURL) {

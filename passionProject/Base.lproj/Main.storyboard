@@ -88,8 +88,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WeQ-WZ-34K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="fJr-AI-7X7"/>
+                                    <constraint firstAttribute="height" constant="618" id="fgh-o7-BE5"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdD-3F-ZfP">
-                                <rect key="frame" x="72" y="251" width="225" height="46.5"/>
+                                <rect key="frame" x="72" y="254" width="225" height="43.5"/>
                                 <color key="backgroundColor" red="0.7531377893787794" green="1" blue="0.66234158677602428" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal">
@@ -109,22 +116,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SdD-3F-ZfP" firstAttribute="height" secondItem="mRQ-6D-6WO" secondAttribute="height" multiplier="0.07" id="DRs-Ek-DXS"/>
-                            <constraint firstItem="SdD-3F-ZfP" firstAttribute="top" secondItem="8G0-3g-ANI" secondAttribute="top" constant="231" id="OTa-nv-Sos"/>
-                            <constraint firstItem="SdD-3F-ZfP" firstAttribute="width" secondItem="mRQ-6D-6WO" secondAttribute="width" multiplier="0.6" id="XAq-Jq-WTz"/>
-                            <constraint firstItem="SdD-3F-ZfP" firstAttribute="leading" secondItem="8G0-3g-ANI" secondAttribute="leading" constant="72" id="q8h-Dv-qnL"/>
+                            <constraint firstItem="SdD-3F-ZfP" firstAttribute="height" secondItem="WeQ-WZ-34K" secondAttribute="height" multiplier="0.07" id="NDW-4J-PUH"/>
+                            <constraint firstItem="WeQ-WZ-34K" firstAttribute="top" secondItem="SdD-3F-ZfP" secondAttribute="bottom" constant="-297.5" id="PjV-1o-IYF"/>
+                            <constraint firstItem="WeQ-WZ-34K" firstAttribute="leading" secondItem="8G0-3g-ANI" secondAttribute="leading" id="d01-LO-MhV"/>
+                            <constraint firstItem="SdD-3F-ZfP" firstAttribute="width" secondItem="WeQ-WZ-34K" secondAttribute="width" multiplier="0.6" id="hzH-tu-Xyg"/>
+                            <constraint firstItem="WeQ-WZ-34K" firstAttribute="top" secondItem="mRQ-6D-6WO" secondAttribute="top" id="iuG-V2-LIX"/>
+                            <constraint firstItem="WeQ-WZ-34K" firstAttribute="leading" secondItem="SdD-3F-ZfP" secondAttribute="trailing" constant="-297" id="rcl-Oa-z8A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8G0-3g-ANI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Login" id="F1V-aZ-5dS"/>
                     <navigationItem key="navigationItem" id="spw-0P-xUO"/>
                     <connections>
+                        <outlet property="coverImage" destination="WeQ-WZ-34K" id="MSx-Ry-7X6"/>
                         <outlet property="loginButton" destination="SdD-3F-ZfP" id="wof-RU-Kmx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJ3-oB-AAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="684"/>
+            <point key="canvasLocation" x="1196" y="682.3088455772114"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M77-pG-A6j">

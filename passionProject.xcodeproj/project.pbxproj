@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		815021F120B0C7810056E703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815021F020B0C7810056E703 /* AppDelegate.swift */; };
-		815021F320B0C7810056E703 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 815021F220B0C7810056E703 /* art.scnassets */; };
 		815021F520B0C7810056E703 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815021F420B0C7810056E703 /* ViewController.swift */; };
 		815021F820B0C7810056E703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815021F620B0C7810056E703 /* Main.storyboard */; };
 		815021FA20B0C7820056E703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815021F920B0C7820056E703 /* Assets.xcassets */; };
 		815021FD20B0C7820056E703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815021FB20B0C7820056E703 /* LaunchScreen.storyboard */; };
 		8150220820B0C7820056E703 /* passionProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150220720B0C7820056E703 /* passionProjectTests.swift */; };
 		8150221320B0C7820056E703 /* passionProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150221220B0C7820056E703 /* passionProjectUITests.swift */; };
+		81717B8820C5CE00003F02A3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 81717B8720C5CE00003F02A3 /* art.scnassets */; };
 		81BEE6CC20B279850043644D /* Network Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6CB20B279850043644D /* Network Helper.swift */; };
 		81BEE6CF20B279E30043644D /* Image Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6CE20B279E30043644D /* Image Helper.swift */; };
 		81BEE6D120B27B160043644D /* unsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEE6D020B27B160043644D /* unsplashAPI.swift */; };
@@ -50,7 +50,6 @@
 /* Begin PBXFileReference section */
 		815021ED20B0C7810056E703 /* passionProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passionProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815021F020B0C7810056E703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		815021F220B0C7810056E703 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		815021F420B0C7810056E703 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		815021F720B0C7810056E703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815021F920B0C7820056E703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +61,8 @@
 		8150220E20B0C7820056E703 /* passionProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passionProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8150221220B0C7820056E703 /* passionProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passionProjectUITests.swift; sourceTree = "<group>"; };
 		8150221420B0C7820056E703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81717B8620C5CD47003F02A3 /* imagecover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imagecover.jpg; sourceTree = "<group>"; };
+		81717B8720C5CE00003F02A3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		81BEE6CB20B279850043644D /* Network Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Helper.swift"; sourceTree = "<group>"; };
 		81BEE6CE20B279E30043644D /* Image Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Helper.swift"; sourceTree = "<group>"; };
 		81BEE6D020B27B160043644D /* unsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplashAPI.swift; sourceTree = "<group>"; };
@@ -132,11 +133,11 @@
 				81BEE6CD20B279900043644D /* Models */,
 				815021F020B0C7810056E703 /* AppDelegate.swift */,
 				81D6CA4920B4CB0100E328CE /* passionProject-Bridging-Header.h */,
-				815021F220B0C7810056E703 /* art.scnassets */,
 				815021F420B0C7810056E703 /* ViewController.swift */,
 				81F9F36520B487B7009092D1 /* SpotifyLoginViewController.swift */,
 				815021F620B0C7810056E703 /* Main.storyboard */,
 				815021F920B0C7820056E703 /* Assets.xcassets */,
+				81717B8620C5CD47003F02A3 /* imagecover.jpg */,
 				815021FB20B0C7820056E703 /* LaunchScreen.storyboard */,
 				815021FE20B0C7820056E703 /* Info.plist */,
 			);
@@ -176,6 +177,7 @@
 				81F9F36720B48B15009092D1 /* spotifyToken.swift */,
 				81F9F36B20B48BE3009092D1 /* TokenAPI.swift */,
 				81F9F3B120B4AE62009092D1 /* SpotifyKeys.swift */,
+				81717B8720C5CE00003F02A3 /* art.scnassets */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,8 +287,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815021F320B0C7810056E703 /* art.scnassets in Resources */,
 				815021FD20B0C7820056E703 /* LaunchScreen.storyboard in Resources */,
+				81717B8820C5CE00003F02A3 /* art.scnassets in Resources */,
 				815021FA20B0C7820056E703 /* Assets.xcassets in Resources */,
 				815021F820B0C7810056E703 /* Main.storyboard in Resources */,
 			);
