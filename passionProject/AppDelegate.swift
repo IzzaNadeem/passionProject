@@ -10,14 +10,40 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    var auth = SPTAuth()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        auth.redirectURL = URL(string: "passionProject://returnAfterLogin")
+            auth.sessionUserDefaultsKey = "current session"
         return true
     }
+    
+     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        //called when user signs into spotify. session data saved into user defaults, then notification posted to call updateAfterFirstLogin in ViewController.swift.
+        // 2- check if app can handle redirect URL
+        if auth.canHandle(auth.redirectURL) {
+            // 3 - handle callback in closure
+            auth.handleAuthCallback(withTriggeredAuthURL: url, callback: { (error, session) in
+                // 4- handle error
+                if error != nil {
+                    print("error!")
+                }
+                // 5- Add session to User Defaults
+                let userDefaults = UserDefaults.standard
+                let sessionData = NSKeyedArchiver.archivedData(withRootObject:session ?? "no session")
+                userDefaults.set(sessionData, forKey: "SpotifySession")
+                userDefaults.synchronize() //dont think i need this
+                // 6 - Tell notification center login is successful
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
+            })
+            return true
+        }
+        return false
+    }
+    
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
